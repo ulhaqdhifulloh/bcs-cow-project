@@ -375,3 +375,6 @@ async def predict(image_rgb: UploadFile = File(...), image_depth: UploadFile = F
 - Dataset Dryad: *Labeled RGB and depth images for cattle BCS* (RealSense D435i).  
 - UNICT + Penn Vet BCS Database.  
 - Literatur otomasi BCS berbasis visi komputer (CNN/YOLO/3D point cloud).
+
+
+---
