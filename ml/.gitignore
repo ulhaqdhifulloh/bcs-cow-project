@@ -1,0 +1,19 @@
+# Data & artefak besar
+data/raw/
+data/processed/
+data/field_data/
+mlflow/mlruns/
+logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual env & env vars
+venv/
+.env
+

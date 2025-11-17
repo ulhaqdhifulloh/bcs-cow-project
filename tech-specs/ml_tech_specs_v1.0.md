@@ -4,16 +4,16 @@ Dokumen ini adalah spesifikasi teknis *end-to-end* untuk pengembangan, pelatihan
 
 ---
 
-## 0) Ringkasan (TL;DR)
+## Executive Summary
 - **Data**: RGB + Depth 16-bit (RGB-D), masker segmentasi instance sapi.
 - **Model**: Pipeline 2-tahap — (1) YOLOv8-Seg untuk segmentasi, (2) MLP Regressor untuk prediksi BCS dari fitur morfometrik (dari depth).
 - **Target**: MAE < 0.25, R² > 0.75, *Accuracy@±0.25* ≥ 95%, latensi API < 5 detik/prediksi.
 - **Arsitektur**: Hybrid Edge–Cloud (mobile akuisisi & offline cache; cloud untuk inferensi & dashboard).
-- **Daya Uji**: 5-fold CV by **cow_id**, hold-out test set, uji lapangan 2 minggu di peternakan mitra.
+- **Daya Uji**: 5-fold CV by **cow_id**, hold-out test set, uji lapangan di peternakan mitra.
 
 ---
 
-## 1) Pemahaman Kebutuhan (Business Understanding)
+## 1) Business Understanding
 
 ### 1.1 Latar Belakang & Masalah
 - BCS penting untuk kesehatan reproduksi, produktivitas susu, dan manajemen bobot.
@@ -38,15 +38,15 @@ Dokumen ini adalah spesifikasi teknis *end-to-end* untuk pengembangan, pelatihan
 1. **Publik (baseline)**  
    - Dryad: *Labeled RGB and depth images for cattle BCS* (Intel RealSense D435i).  
    - UNICT + Penn Vet BCS DB (gambar top-view, anotasi anatomi & label BCS).
-2. **Primer (lapangan)**  
-   - Lokasi: 2–3 peternakan mitra (mis. Lembang, Jawa Barat).  
-   - Target: **200–300** set RGB-D dari **20–30** ekor sapi (Holstein/cross).  
-   - Perangkat: Intel RealSense D435/D455 atau Azure Kinect; tripod; penggaris/marker jarak.
+2. **Primer (lapangan) > Pending untuk Tahap Awal**  
+   - Lokasi: Peternakan mitra (Jawa Barat).  
+   - Target: **200–300** set RGB-D dari beberapa ekor sapi yang ada di peternakan tersebut (Holstein/cross).  
+   - Perangkat: Kamera handphone/action cam/deep cam; tripod; penggaris/marker jarak.
 
 ### 2.2 Protokol Akuisisi
 - **Jarak kamera**: 2–3 m dari sapi, tinggi ~1.2–1.6 m (disesuaikan).
 - **Posisi**: standing; sudut *lateral* dan *posterior-anterior* (opsional *top-view* bila memungkinkan).
-- **Variasi**: 8–10 *capture* per sapi; kondisi pencahayaan beragam (pagi/siang/sore).
+- **Variasi**: 20-30 *capture* per sapi; kondisi pencahayaan beragam (pagi/siang/sore).
 - **Sinkronisasi label**: *Expert scoring* dilakukan pada jendela ≤ 1 jam dari pengambilan gambar.
 - **Keamanan**: jarak aman, minim gangguan/stres.
 
