@@ -1,0 +1,25 @@
+{
+    "model_name": "yolov8n-cls-bcs",
+    "model_version": "v1-yolov8n-20251124",
+    "training_date": "2025-11-24T00:06:42.158669",
+    "dataset": "Science Data Bank (Huang et al.)",
+    "dataset_size": 53566,
+    "classes": [
+        "3.25",
+        "3.5",
+        "3.75",
+        "4.0",
+        "4.25"
+    ],
+    "num_classes": 5,
+    "metrics": {
+        "top1_accuracy": "93.00%",
+        "mae_bcs": "0.0195",
+        "accuracy_at_025": "100.00%",
+        "inference_time_ms": "~0.5"
+    },
+    "framework": "ultralytics yolov8",
+    "pytorch_version": "2.5.1+cu121",
+    "cuda_available": true,
+    "status": "production_ready"
+}
