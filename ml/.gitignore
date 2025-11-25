@@ -1,8 +1,8 @@
 # Data & artefak besar
 data/raw/
 data/processed/
-data/field_data/
-mlflow/mlruns/
+mlflow/
+models/
 logs/
 
 # Python cache
@@ -12,8 +12,13 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+notebooks/runs/
 
 # Virtual env & env vars
 venv/
 .env
 
+# Archive & temporary
+archive/
+*.tmp
+*.bak
