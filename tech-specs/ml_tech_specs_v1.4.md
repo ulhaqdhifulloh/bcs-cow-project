@@ -418,14 +418,14 @@ mlflow ui --backend-store-uri "file:///%CD%/mlflow" --port 5000
 
 **API Endpoints**:
 
-1. **GET /** - Root endpoint
+1. **GET /** - Pembuka
    - Returns: API status message
 
-2. **GET /health** - Health check
+2. **GET /health** - Mengecek status API
    - Returns: `{"status": "healthy"}` if model loaded
    - Returns: `503 Service Unavailable` if model not loaded
 
-3. **POST /predict** - Image classification
+3. **POST /predict** - Melakukan prediksi (Upload image)
    - Input: `file` (multipart/form-data image upload)
    - Returns: 
      ```json

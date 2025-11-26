@@ -40,6 +40,14 @@ Direktori ini berisi API dan aplikasi Streamlit untuk mengklasifikasikan Body Co
 2.  API akan tersedia di `http://localhost:8000`.
 3.  Dokumentasi API: `http://localhost:8000/docs`.
 
+## API Endpoints
+
+Berikut adalah daftar endpoint yang tersedia:
+
+-   **GET /**: Pembuka (Welcome message).
+-   **GET /health**: Mengecek status API (Health check).
+-   **POST /predict**: Melakukan prediksi (Upload image).
+
 ## Menjalankan Aplikasi Streamlit
 
 1.  Di terminal baru, jalankan:

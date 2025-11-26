@@ -56,7 +56,13 @@ streamlit run streamlit_app.py
 
 Aplikasi akan terbuka di browser (biasanya `http://localhost:8501`).
 
-### 5. Test API Manual
+### 5. API Endpoints
+
+-   **GET /**: Pembuka.
+-   **GET /health**: Mengecek status API.
+-   **POST /predict**: Melakukan prediksi (upload image).
+
+### 6. Test API Manual
 
 Anda juga dapat menguji API menggunakan curl atau Postman ke endpoint `/predict`:
 
@@ -67,7 +73,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 Atau buka dokumentasi interaktif di `http://localhost:8000/docs`.
 
-## 6. Viewing MLflow Experiment Tracking
+## 7. Viewing MLflow Experiment Tracking
 
 Untuk melihat hasil logging dari eksperimen ML (metrics, parameters, artifacts), gunakan MLflow UI:
 

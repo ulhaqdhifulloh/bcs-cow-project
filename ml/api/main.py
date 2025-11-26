@@ -18,7 +18,7 @@ app = FastAPI(
 )
 
 # Load model
-MODEL_PATH = os.getenv("MODEL_PATH", "../../models/production/20251125_202253/best.pt") 
+MODEL_PATH = os.getenv("MODEL_PATH", "../models/production/20251125_202253/best.pt") 
 model = None
 
 # Class names mapping 
