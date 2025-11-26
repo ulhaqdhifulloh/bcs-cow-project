@@ -1,8 +1,5 @@
 # Data & artefak besar
-data/raw/
-data/processed/
-mlflow/
-logs/
+data/
 
 # Python cache
 __pycache__/
@@ -21,3 +18,8 @@ venv/
 archive/
 *.tmp
 *.bak
+mlflow/.trash
+
+# File Bawaan
+notebooks/yolo11n.pt
+notebooks/yolo8n-cls.pt

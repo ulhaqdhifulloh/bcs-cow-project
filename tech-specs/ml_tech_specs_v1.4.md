@@ -374,6 +374,33 @@ mlflow/999992508245777105/
     └── tags/                              # Run tags
 ```
 
+### 5.4 Accessing MLflow UI
+
+**Untuk melihat dashboard eksperimen** melalui web browser:
+
+**PowerShell:**
+```powershell
+cd ml
+mlflow ui --backend-store-uri "file:///$PWD/mlflow" --port 5000
+```
+
+**Command Prompt (CMD):**
+```cmd
+cd ml
+mlflow ui --backend-store-uri "file:///%CD%/mlflow" --port 5000
+```
+
+**Dashboard URL**: http://127.0.0.1:5000
+
+**Fitur Utama MLflow UI**:
+- ✅ View dan compare experiments/runs
+- ✅ Download model artifacts (`.pt`, `.onnx`)
+- ✅ Visualisasi training metrics dan curves
+- ✅ Track hyperparameters dan configurations
+- ✅ Search dan filter runs berdasarkan metrics
+
+**Referensi**: Lihat [mlflow/README.md](../ml/mlflow/README.md) untuk dokumentasi lengkap.
+
 ---
 
 ## 6) Deployment: API & Frontend (Implemented)

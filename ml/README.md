@@ -66,3 +66,24 @@ curl -X POST "http://localhost:8000/predict" \
 ```
 
 Atau buka dokumentasi interaktif di `http://localhost:8000/docs`.
+
+## 6. Viewing MLflow Experiment Tracking
+
+Untuk melihat hasil logging dari eksperimen ML (metrics, parameters, artifacts), gunakan MLflow UI:
+
+**PowerShell:**
+```powershell
+cd ml
+mlflow ui --backend-store-uri "file:///$PWD/mlflow" --port 5000
+```
+
+**Command Prompt (CMD):**
+```cmd
+cd ml
+mlflow ui --backend-store-uri "file:///%CD%/mlflow" --port 5000
+```
+
+Setelah server berjalan, buka browser di `http://127.0.0.1:5000` untuk melihat dashboard eksperimen.
+
+> **Catatan**: Lihat [mlflow/README.md](mlflow/README.md) untuk dokumentasi lengkap tentang MLflow tracking.
+

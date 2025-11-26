@@ -1,0 +1,16 @@
+{
+  "training_date": "2025-11-25T20:22:53.682554",
+  "model_name": "YOLOv8-cls",
+  "classes": [
+    "3.25",
+    "3.5",
+    "3.75",
+    "4.0",
+    "4.25"
+  ],
+  "metrics": {
+    "accuracy": 0.8984443061605476,
+    "inference_time_ms": 32.98907915320251
+  },
+  "source_weights": "..\\..\\models\\yolov8_1499a5d1\\weights\\best.pt"
+}
