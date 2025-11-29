@@ -1,5 +1,4 @@
 import os
-from typing import Dict
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from ultralytics import YOLO
