@@ -23,3 +23,9 @@ mlflow/.trash
 # File Bawaan
 notebooks/yolo11n.pt
 notebooks/yolo8n-cls.pt
+
+# Validator datasets (too large)
+validator/dataset/
+validator/dataset_v3/
+validator/dataset/Cow Pose Estimation Dataset/
+validator/dataset/Cattle side view and back view dataset/

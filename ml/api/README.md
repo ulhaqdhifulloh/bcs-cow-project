@@ -47,6 +47,10 @@ Berikut adalah daftar endpoint yang tersedia:
 -   **GET /**: Pembuka (Welcome message).
 -   **GET /health**: Mengecek status API (Health check).
 -   **POST /predict**: Melakukan prediksi (Upload image).
+    - Memeriksa apakah gambar adalah bagian belakang sapi (menggunakan model Validator).
+    - Mengembalikan `400 Bad Request` jika gambar bukan bagian belakang sapi.
+    - Mengembalikan skor BCS + Confidence level.
+    - Memberikan `warning` jika confidence BCS rendah (< 60%), yang menandakan gambar mungkin kurang jelas atau sapi berada di luar range BCS normal.
 
 ## Menjalankan Aplikasi Streamlit
 

@@ -1,1 +1,16 @@
+# Ignore web project
+web/
 
+# Ignore tech-specs
+tech-specs/
+
+# Ignore ML datasets and large folders
+ml/data/
+ml/validator/dataset/
+ml/validator/dataset_v3/
+ml/models/
+
+# General ignores
+.env
+*.pyc
+__pycache__/
